@@ -1,10 +1,55 @@
 <html>
     <head>
+        <link href="//thomasf.github.io/solarized-css/solarized-dark.min.css" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript">
+        function cmd(input) {
+            if (input == "ls") {
+                $( "div.stdout" ).html("drwxr-xr-x+ 363 guest staff  12342 20 Feb 23:52 ..<br>drwxr-xr-x    2 guest staff     68 20 Feb 23:51 .<br>-rw-r--r--    1 guest staff      4 20 Feb 23:53 <a href=\"https://www.linkedin.com/in/ottojongerius\">linkedin.txt</a><br>-rw-r--r--    1 guest staff      4 20 Feb 23:53 <a href=\"https://github.com/ojongerius\">github.txt</a><br>");
+            }
+            else if (input == "cat") {
+                //$( "div.stdout" ).html("Usage: cat [file]")
+                $( "div.stdout" ).html("not implemented yet, stay tuned.")
+            }
+            else if (input == "help") {
+                $( "div.stdout" ).html("available commands:<br>cat<br>ls<br>write")
+            }
+            else if (input == "write") {
+                //$( "div.stdout" ).html("Usage: write [text]")
+                $( "div.stdout" ).html("not implemented yet, stay tuned.")
+            }
+            else if (input == "") {
+                $( "div.stdout" ).html("")
+            }
+            else {
+                $( "div.stdout" ).html(input + ": command not found")
+            }
+        }
+        // TODO: Always keep focus on stdin, not just on document load
+        $(document).ready(function() {
+            $('#stdin').focus();
+            $('#stdin').on("keypress", function(e) {
+                var code = (e.keyCode ? e.keyCode : e.which);
+                if (code == 13) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log($('#stdin').val());
+                    cmd($('#stdin').val());
+                    this.value = '';
+                }
+            });
+        });
+    </script>
         <title> 0tt0.net </title>
     </head>
-    <body>
-        <center>
-            <img title="Oh dear" src="images/sunglassmen.jpg" alt="A picture of men with sunglasses" />
-        </center>
+    <body style="border:0px;padding: 3em;">
+    <!-- TODO Make this dynamic, depending on existence and timestamp of cookie -->
+    Last login: Sat Feb 20 22:19:57 on ttys018 <br>
+    Type "help" to get started
+    <br>
+    <div id=cli-wrapper style="small" >
+        guest@<a href="http://www.0tt0.net">0tt0.net</a> ~> <input type="search" id=stdin     style="background-color:#002b36;color:#839496;border:0px ;outline: none"> </>
+    </div>
+    <div class=stdout />
     </body>
 </html>
