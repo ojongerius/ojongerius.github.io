@@ -69,9 +69,22 @@ $(function() {
             e.preventDefault();
             e.stopPropagation();
             cmd($( '#stdin' ).val());
-            commands.push($( '#stdin' ).val());
-            // TODO: trash dupes
-            // TODO: check lenght, save last 10 commands
+            // TODO move this out into function during next cleanup
+            if (commands.indexOf($( '#stdin' ).val()) === -1) {
+                // New command, store it.
+                console.log(commands)
+                console.log(typeof commands)
+                commands.push($( '#stdin' ).val());
+            }
+            else if (commands.indexOf($( '#stdin' ).val()) > -1) {
+                // Duplicate, remove old one and append new one
+                commands.splice(commands.indexOf($( '#stdin' ).val()), 1);
+                commands.push($( '#stdin' ).val());
+            }
+            // Only save the last 10 commands
+            if (commands.length > 10 )  {
+                commands = commands.slice(Math.max(commands.length - 10, 1))
+            }
             Cookies.set('commands', commands);
             this.value = '';
         }
