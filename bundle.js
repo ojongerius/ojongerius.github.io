@@ -11,15 +11,12 @@ window.Cookies = require('js-cookie');
 
 function cmd(input) {
     if (input == "ls") {
-        console.log(typeof Object.keys(contents));
         $( "div.stdout" ).html(String(Object.keys(contents)).replace(",","<br>"));
     }
     else if (input.match("cat")) {
-        console.log("Handling cat")
         // TODO see if our match is in the keys, if so: represent it
         if (input.match("cat (.*)")) {
             var match = input.match("cat (.*)")[1]
-            console.log(match)
             if (contents[match]) {
                 $( "div.stdout" ).html(contents[match])
             } else {
@@ -57,7 +54,6 @@ $(function() {
         if (code == 13) {
             e.preventDefault();
             e.stopPropagation();
-            console.log($('#stdin').val());
             cmd($('#stdin').val());
             this.value = '';
         }
