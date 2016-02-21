@@ -1,3 +1,5 @@
+// Surely there must be a better way to do this
+window.Cookies = require('js-cookie');
 function cmd(input) {
     if (input == "ls") {
         $( "div.stdout" ).html("-rw-r--r--    1 guest staff      4 20 Feb 23:53 <a href=\"https://www.linkedin.com/in/ottojongerius\">linkedin.txt</a><br>-rw-r--r--    1 guest staff      4 20 Feb 23:53 <a href=\"https://github.com/ojongerius\">github.txt</a><br>");
@@ -20,9 +22,11 @@ function cmd(input) {
         $( "div.stdout" ).html(input + ": command not found")
     }
 }
+
 // TODO: Always keep focus on stdin, not just on document load
-//alertCookie()
 $(document).ready(function() {
+    $('#last').text(Cookies.get('last_visit').replace(/(?:\r\n|\r|\n)/g, ''));
+    Cookies.set('last_visit', Date());
     $('#stdin').focus();
     $('#stdin').on("keypress", function(e) {
         var code = (e.keyCode ? e.keyCode : e.which);
