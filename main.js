@@ -1,12 +1,32 @@
+// TODO: create a list (arrary) of file names, have attribs, timestamps and
+// contents stored elsewhere. Move into a file.
+var contents = {
+    "linkedin.txt": "Linkedin profile at <a href=\"https://www.linkedin.com/in/ottojongerius\">https://www.linkedin.com/in/ottojongerius</a>",
+    "github.txt": "Github profile at <a href=\"https://github.com/ojongerius\">https://github.com/ojongerius</a>",
+};
+
 // Surely there must be a better way to do this
 window.Cookies = require('js-cookie');
+
 function cmd(input) {
     if (input == "ls") {
-        $( "div.stdout" ).html("-rw-r--r--    1 guest staff      4 20 Feb 23:53 <a href=\"https://www.linkedin.com/in/ottojongerius\">linkedin.txt</a><br>-rw-r--r--    1 guest staff      4 20 Feb 23:53 <a href=\"https://github.com/ojongerius\">github.txt</a><br>");
+        console.log(typeof Object.keys(contents));
+        $( "div.stdout" ).html(String(Object.keys(contents)).replace(",","<br>"));
     }
-    else if (input == "cat") {
-        //$( "div.stdout" ).html("Usage: cat [file]")
-        $( "div.stdout" ).html("not implemented yet, stay tuned.")
+    else if (input.match("cat")) {
+        console.log("Handling cat")
+        // TODO see if our match is in the keys, if so: represent it
+        if (input.match("cat (.*)")) {
+            var match = input.match("cat (.*)")[1]
+            console.log(match)
+            if (contents[match]) {
+                $( "div.stdout" ).html(contents[match])
+            } else {
+                $( "div.stdout" ).html("cat: " + match + ": No such file or directory")
+            }
+        } else {
+            $( "div.stdout" ).html("usage: cat [file]")
+        }
     }
     else if (input == "help") {
         $( "div.stdout" ).html("available commands:<br>cat<br>ls<br>write")
