@@ -25,8 +25,11 @@ function cmd(input) {
 }
 
 // TODO: Always keep focus on stdin, not just on document load
-$(document).ready(function() {
-    $('#last').text(Cookies.get('last_visit').replace(/(?:\r\n|\r|\n)/g, ''));
+//(document).ready(function() {
+$(function() {
+    if ( Cookies.get('last_visit') ) {
+        $('#last').text(Cookies.get('last_visit').replace(/(?:\r\n|\r|\n)/g, ''));
+    }
     Cookies.set('last_visit', Date());
     $('#stdin').focus();
     $('#stdin').on("keypress", function(e) {
