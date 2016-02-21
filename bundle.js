@@ -10,6 +10,7 @@ var contents = {
 window.Cookies = require('js-cookie');
 
 function cmd(input) {
+    // TODO put commands in dict
     if (input == "ls") {
         $( "div.stdout" ).html(String(Object.keys(contents)).replace(",","<br>"));
     }
@@ -27,11 +28,19 @@ function cmd(input) {
         }
     }
     else if (input == "help") {
-        $( "div.stdout" ).html("available commands:<br>cat<br>ls<br>write")
+        $( "div.stdout" ).html("available commands:<br>cat<br>history<br>ls<br>write")
     }
     else if (input == "write") {
         //$( "div.stdout" ).html("Usage: write [text]")
         $( "div.stdout" ).html("not implemented yet, stay tuned.")
+    }
+    else if (input == "history") {
+        // TODO: handle empty history
+        if (window.Cookies.get("commands")) {
+            $( "div.stdout" ).html( JSON.parse(window.Cookies.get("commands")).toString().replace(/,/g, "<br>") )
+        } else {
+            $( "div.stdout" ).html( "" )
+        }
     }
     else if (input == "") {
         $( "div.stdout" ).html("")
@@ -44,17 +53,26 @@ function cmd(input) {
 // TODO: Always keep focus on stdin, not just on document load
 //(document).ready(function() {
 $(function() {
+    var commands = [];
     if ( Cookies.get('last_visit') ) {
-        $('#last').text(Cookies.get('last_visit').replace(/(?:\r\n|\r|\n)/g, ''));
+        $( '#last' ).text(Cookies.get('last_visit').replace(/(?:\r\n|\r|\n)/g, '').split(','));
+    }
+    if ( Cookies.get('commands') ) {
+        // var commands = [];
+        commands = JSON.parse(Cookies.get('commands')); // Would need to go through
     }
     Cookies.set('last_visit', Date());
-    $('#stdin').focus();
-    $('#stdin').on("keypress", function(e) {
+    $( '#stdin' ).focus();
+    $( '#stdin' ).on("keypress", function(e) {
         var code = (e.keyCode ? e.keyCode : e.which);
         if (code == 13) {
             e.preventDefault();
             e.stopPropagation();
-            cmd($('#stdin').val());
+            cmd($( '#stdin' ).val());
+            commands.push($( '#stdin' ).val());
+            // TODO: trash dupes
+            // TODO: check lenght, save last 10 commands
+            Cookies.set('commands', commands);
             this.value = '';
         }
     });
