@@ -12,7 +12,7 @@ He likes to talk about himself in third person and
  * will soon become a published writer
  * has recently rekindled his love for biking on the trails of Wellington
  * is just starting an interesting turn of events in life: becoming
-a dad, being an urban farmer, a Kiwi, and taking a year off to enjoy his first sabbatical
+a dad, an urban farmer, a Kiwi, and taking a year off to enjoy his first sabbatical
 
 
 Find him on [LinkedIn](https://www.linkedin.com/in/ottojongerius)/[Twitter](https://twitter.com/xzu)/[GitHub](https://github.com/ojongerius) or shoot him <a href="mailto:otto+blog@0tt0.net">an email</a>
