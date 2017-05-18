@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel="shortcut icon" href="assets/favicon.ico?v=1">
+        <link href="//thomasf.github.io/solarized-css/solarized-dark.min.css" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="/bundle.js" type="text/javascript"></script>
+        <title> 0tt0.net </title>
+    </head>
+    <body style="border:0px;padding: 3em;">
+    Last login: <div style="display: inline;" id="last">Sun Feb 21 2016 14:22:08 GMT+1100 (AEDT)</div> on ttys018 <br>
+    Type "help" to get started....
+    <br>
+    <div id=cli-wrapper style="small" >
+        guest@<a href="http://www.0tt0.net">0tt0.net</a> ~> <input type="search" id=stdin     style="background-color:#002b36;color:#839496;border:0px ;outline: none"> </>
+    </div>
+    <div class=stdout />
+    </body>
+</html>

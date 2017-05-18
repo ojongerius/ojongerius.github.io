@@ -1,0 +1,46 @@
+baseURL = "http://www.0tt0.net/sabbatical-hugo"
+languageCode = "en-us"
+title = "A Windy Sabbatical"
+#theme = "hyde"
+
+#[params]
+#    author = "Otto Jongerius" # For liquorice theme
+#    layoutReverse = true # For Hyde theme
+
+theme = "hucore"
+copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/xzu\" target=\"_blank\">Twitter</a> | <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
+googleAnalytics = "UA-29758853-2"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params]
+description = "Your description here"
+keywords = ["keyword 1", "keyword 2", "keyword 3"]
+author = "Otto Jongerius"
+sharingicons = true
+
+[params.highlight]
+style = "github"
+languages = ["go", "dockerfile"]
+
+[[params.social]]
+url = "https://github.com/ojongerius"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "https://twitter.com/xzu"
+fa_icon = "fa-twitter"
+
+[[params.social]]
+url = "https://linkedin.com/in/ottojongerius"
+fa_icon = "fa-linkedin-square"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
+
+[[params.socialshare]]
+url = "https://linkedin.com/in/ottojongerius"
+fa_icon = "fa-linkedin-square"
