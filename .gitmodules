@@ -1,0 +1,3 @@
+[submodule "sabbatical-hugo/themes/hucore"]
+	path = sabbatical-hugo/themes/hucore
+	url = https://github.com/mgjohansen/hucore.git
