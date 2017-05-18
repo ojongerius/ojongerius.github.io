@@ -2,18 +2,18 @@ language: go
 
 go: 1.8
 
-install: go get -v gopkg.in/spf13/hugo.v0 # Install lates v0 releast currently 0.20.7
+install: go get -v gopkg.in/spf13/hugo.v0 # Install the latest v0 release -currently 0.20.7
 
 script:
-    - cd sabbatical-hugo  # Our sources live here
-    - $GOPATH/bin/hugo.v0 # Hugo will default to writing output to public, theme is configured in config
-    - echo www.0tt0.net >> public/CNAME
+    - cd sabbatical-hugo                # Our sources live here
+    - $GOPATH/bin/hugo.v0               # Hugo will default to writing output to public
+    - echo www.0tt0.net >> public/CNAME # Use a custom domain
 
 deploy:
-  provider: pages        # The Github pages provider
-  skip_cleanup: true     # Do not remove the output files of our builds, as we need to deploy them
-  local_dir: public      # Github output to here
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  target_branch: master  # Sites like user.github.com can only be served from master :|
+  provider: pages             # Use the Github Pages provider
+  skip_cleanup: true          # Don't remove the output files of our builds, the provider needs them to deploy
+  local_dir: public           # Hugo output will be found to here
+  github_token: $GITHUB_TOKEN # As set in travis-ci.org dashboard
+  target_branch: master       # Sites following the user.github.io pattern can only be served from master :|
   on:
     branch: deploy
