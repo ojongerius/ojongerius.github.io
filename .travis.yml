@@ -5,8 +5,8 @@ go: 1.8
 install: go get -v gopkg.in/spf13/hugo.v0 # Install lates v0 releast currently 0.20.7
 
 script:
-    - cd sabbatical-hugo # Our sources live here
-    - hugo              # Hugo will default to writing output to public, theme is configured in config
+    - cd sabbatical-hugo  # Our sources live here
+    - $GOPATH/bin/hugo.v0 # Hugo will default to writing output to public, theme is configured in config
 
 deploy:
   provider: pages        # The Github pages provider
