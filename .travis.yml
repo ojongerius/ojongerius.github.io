@@ -11,7 +11,8 @@ script:
 deploy:
   provider: pages        # The Github pages provider
   skip_cleanup: true     # Do not remove the output files of our builds, as we need to deploy them
-  local_dir: public      # Github outpus to here
+  local_dir: public      # Github output to here
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  target_branch: master  # Sites like user.github.com can only be served from master :|
   on:
-    branch: master
+    branch: deploy
