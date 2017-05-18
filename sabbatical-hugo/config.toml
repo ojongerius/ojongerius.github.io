@@ -7,7 +7,7 @@ title = "A Windy Sabbatical"
 #    author = "Otto Jongerius" # For liquorice theme
 #    layoutReverse = true # For Hyde theme
 
-theme = "Hucore"
+theme = "hucore"
 copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/xzu\" target=\"_blank\">Twitter</a> | <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
 googleAnalytics = "UA-29758853-2"
 
