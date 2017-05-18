@@ -1,13 +1,12 @@
 language: go
 
-go:
-    - 1.8
+go: 1.8
 
-install: go get -v github.com/spf13/hugo # Install latest and greatest Hugo -for the brave
+install: go get -v gopkg.in/spf13/hugo.v0 # Install lates v0 releast currently 0.20.7
 
 script:
     - cd sabbatical-hugo # Our sources live here
-    -  hugo              # Hugo will default to writing output to public, theme is configured in config
+    - hugo              # Hugo will default to writing output to public, theme is configured in config
 
 deploy:
   provider: pages        # The Github pages provider
