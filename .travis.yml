@@ -7,6 +7,7 @@ install: go get -v gopkg.in/spf13/hugo.v0 # Install lates v0 releast currently 0
 script:
     - cd sabbatical-hugo  # Our sources live here
     - $GOPATH/bin/hugo.v0 # Hugo will default to writing output to public, theme is configured in config
+    - echo www.0tt0.net >> public/CNAME
 
 deploy:
   provider: pages        # The Github pages provider
