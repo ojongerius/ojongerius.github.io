@@ -1,4 +1,4 @@
-baseURL = "http://www.0tt0.net/sabbatical-hugo"
+baseURL = "http://www.0tt0.net"
 languageCode = "en-us"
 title = "A Windy Sabbatical"
 #theme = "hyde"
