@@ -1,5 +1,8 @@
-Static website. Nothing to see here.
+Repository used to generate www.0tt0.net
 
-Changes *must* be pushed to deploy, on which Travis will publish changes to the
-master branch. A more natural flow would be to have master deploy to the
-gh-pages branch. See https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/ .
+Changes *must* be pushed to the deploy branch (which is set to be the default for this repository).
+Successful Travis builds will generate a static site using HUgo in subdirectory `public` and commit those
+to the `master` branch for Github Pages to serve up.
+
+A more natural flow would be to have master deploy to the
+gh-pages branch, which is not available for user pages -see [configuring a publishing source for Github Ppages.](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages)
