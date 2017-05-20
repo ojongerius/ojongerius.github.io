@@ -7,8 +7,6 @@ install: go get -v gopkg.in/spf13/hugo.v0 # Install the latest v0 release -curre
 script:
     - cd sabbatical-hugo                # Our sources live here
     - $GOPATH/bin/hugo.v0               # Hugo will default to writing output to public
-    - echo www.0tt0.net >> public/CNAME # Use a custom domain
-    - cp ../Rakefile public             # Keep Travis happy
 
 deploy:
   provider: pages             # Use the Github Pages provider
@@ -16,5 +14,6 @@ deploy:
   local_dir: public           # Hugo output will be found to here
   github_token: $GITHUB_TOKEN # As set in travis-ci.org dashboard
   target_branch: master       # Sites following the user.github.io pattern can only be served from master :|
+  fqdn: www.0tt0.net          # Generates CNAME for Github Pages to use
   on:
     branch: deploy
