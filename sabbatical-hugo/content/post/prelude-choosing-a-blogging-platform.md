@@ -1,7 +1,8 @@
 +++
 date = "2017-05-13T14:59:10+12:00"
 draft = true
-title = "prelude - choosing a blogging platform"
+title = "Choosing a blogging platform"
+tags = ["sabbatical", "blog"]
 
 +++
 
@@ -59,21 +60,29 @@ here, use Hugo.
 If you want something future proof, I'd chose Hugo too, it has the advantage
 of having learned from it's predecessors, and has done so very nicely.
 
+Need something that is not just focussed on blogging, or have the need for speed?
+Hugo.
+
 What did I end up using? Well both to be able to write this little article,
 but after initially going for Jekyll, and now wanting a little robustness
-by testing, and possibly AMP for speed and SEO, I'm going to go for Hugo.
+by testing, and possibly AMP for speed and SEO, I'm going to go with Hugo.
 
 ## Deploying
 
-* Jekyll: native support unless you need plugin support.
-* Hugo: Travis is able to deploy to Github pages using the pages
+* Jekyll: native support _unless_ you need plugin support.
+* Hugo: No native support, however, Travis is able to deploy to Github Pages using the pages
  target, see https://docs.travis-ci.com/user/deployment/pages. This rocks,
- because you can now run some tests and any customisations you want, and your
-  only dependency will be to install Hugo, which is both a one-line in your Travis
-  config that you are able to run from your laptop and Travis without having to worry
-  about dependencies.
+ because you can now run some tests, and do any customisations you want, and your
+  only dependency will be to install Hugo. Benefits here are that installation is just a
+  one-line in your Travis config. But you'll be able to use the one liner on your laptop,
+   no matter which Operating System you run, without having to worry about dependencies. Awesome.
 
-An example Travis config would look like so:
+If you find yourself in a position where you wanting to commit changes to a separate branch -the most often way
+to deploy, you can save yourself unnecessary commits and fiddling around by using  https://github.com/X1011/git-directory-deploy automates deploying to a separate
+branch and only commits to the branch if changes would have created changes to your target website.
+
+However, if you are using Travis and Github pages you can let the `pages` deployment do the heavy lifting
+ for you. An example Travis config would look like so:
 
 ```
  language: go
@@ -99,10 +108,6 @@ An example Travis config would look like so:
 ```
 
 
-If you find yourself in a position where you wanting to commit changes to a separate branch -the most often way
-to deploy, you can save yourself unnecessary commits and fiddling around by using  https://github.com/X1011/git-directory-deploy automates deploying to a separate
-branch and only commits to the branch if changes would have created changes to your target website.
-
 Need HTTPS and want easy CI integration? Check out https://www.netlify.com/ <- TODO: get referral?
 
 TODO: add testing? Add promise for BBCI example?
@@ -110,10 +115,12 @@ TODO: add syntax highlighing (install pygments)
 
 Good post: https://www.metachris.com/2017/04/continuous-deployment-hugo---travis-ci--github-pages/
 
-[] http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html
-[] Steve Francia https://twitter.com/spf13
-[] Jekyll http://jekyllrb.com
-[] Hugo http://gohugo.io
+TODO: turn these in nice links, and link to them in the doco up
+<p id=1> http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html </p>
+[2] https://twitter.com/spf13
+[3 - Jekyll](http://jekyllrb.com)
+[4 - Hugo](http://gohugo.io)
+
 [] Middleman https://middlemanapp.com
 [] Nanoc http://nanoc.ws
 [] Go https://golang.org
@@ -122,4 +129,5 @@ Good post: https://www.metachris.com/2017/04/continuous-deployment-hugo---travis
 [] https://github.com/dim0627/hugo_theme_robust AMP, from Hugo site example
 [] https://themes.gohugo.io/slim/ nice and minimal
 [] https://themes.gohugo.io/hyde by SPF but original by @mdo (github)
-[] https://themes.gohugo.io/hucore a minimal version based on Hemmingway 2.
+[] https://themes.gohugo.io/hucore a minimal version based on Hemmingway2.
+[] https://docs.travis-ci.com/user/deployment/pages/
