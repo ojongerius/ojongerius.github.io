@@ -16,8 +16,8 @@ tag = "tags"
 category = "categories"
 
 [params]
-description = "Your description here"
-keywords = ["keyword 1", "keyword 2", "keyword 3"]
+description = "Home is where the heart is"
+keywords = ["sabatical", "expat"]
 author = "Otto Jongerius"
 sharingicons = true
 
