@@ -70,7 +70,7 @@ by testing, and possibly AMP for speed and SEO, I'm going to go with Hugo.
 ## Deploying
 
 * Jekyll: native support _unless_ you need plugin support.
-* Hugo: No native support, however, Travis is able to deploy to Github Pages using the pages
+* Hugo: No native support, however, Travis is able to deploy to Github Pages (experimental) using the pages
  target, see https://docs.travis-ci.com/user/deployment/pages. This rocks,
  because you can now run some tests, and do any customisations you want, and your
   only dependency will be to install Hugo. Benefits here are that installation is just a
