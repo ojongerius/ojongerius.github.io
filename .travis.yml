@@ -8,6 +8,7 @@ script:
     - cd sabbatical-hugo                # Our sources live here
     - $GOPATH/bin/hugo.v0               # Hugo will default to writing output to public
     - echo www.0tt0.net >> public/CNAME # Use a custom domain
+    - cp ../Rakefile public             # Keep Travis happy
 
 deploy:
   provider: pages             # Use the Github Pages provider
