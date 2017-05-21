@@ -7,8 +7,8 @@ layout = "static"
 Otto Jongerius recently moved to Wellington, New Zealand, in order to be with the love of his life,
  Ana, and her two kids.  His son is expected to make an appearance in late June 2017.
 
-Until recently Otto worked at <a href=http://www.atlassian.com>Atlassian</a> firstly in Amsterdam, the Netherlands, then
- Sydney, Australia for the past five years.  Otto has spoken at tech events in London, Tokyo and Sydney.
+Until recently Otto worked at <a href=http://www.atlassian.com>Atlassian</a> for the past five years, firstly in
+ Amsterdam, the Netherlands, then Sydney, Australia. Otto has spoken at tech events in London, Tokyo and Sydney.
 He contributes to Open Source and volunteers at <a href=http://www.libraryforall.org>Library for all</a>.
 
 His move to Wellington kicks off an experimental sabbatical for 12 months.  During this time he will become a Dad,
