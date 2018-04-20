@@ -71,8 +71,8 @@ And last but not least, my first full grain brew, most likely a Belgian style st
 # References
 
 * <a href="https://www.coursera.org/learn/cryptocurrency"  name="1">[1]</a> Coursera: Bitcoin and Cryptocurrency Technologies
-* <a href=https://www.coursera.org/learn/data-manipulation>[2]</a> Coursera: Data Manipulation at Scale: Systems and Algorithms
-* <a href=http://www.libraryforall.org/>[3]</a> Library for All
-* <a href=https://vol.community>[4]</a> Vol.community
-* <a href=https://github.com/volCommunity>[5]</a> Vol.community project page
-* <a href=http://www.cli-nerd.com/>[6]</a> Damien Klinnert's blog.
+* <a href=https://www.coursera.org/learn/data-manipulation name="2">[2]</a> Coursera: Data Manipulation at Scale: Systems and Algorithms
+* <a href=http://www.libraryforall.org/ name="3">[3]</a> Library for All
+* <a href=https://vol.community name="4">[4]</a> Vol.community
+* <a href=https://github.com/volCommunity name="5">[5]</a> Vol.community project page
+* <a href=http://www.cli-nerd.com name="6">[6]</a> Damien Klinnert's blog.
