@@ -15,12 +15,12 @@ Let's start with some numbers:
 * Raised 4 chickens and a few days ago we marked our 250th egg 🍳
 * Brewed 4 batches of beer 🍻
 * Harvested 1 batch of Kale, and am about to harvest the first batches of Carrots, Cabbage, Broccoli 
-  Sprouts and Spinach. Strawberries and Lettuce have just been planted 🥗
+  Sprouts and Spinach. Strawberries and Lettuce have just been planted 👨‍🌾
 * 14 different crypto coins traded, riding the roller coaster, or bubble if you will, that is crypto currencies 💸
 * Followed 2 courses at Coursera; Bitcoin and Cryptocurrency Technologies [[1]](#1) and Bitcoin and Cryptocurrency Technologies [[2]](#2) 💰
 * Collaborated with 1, my favorite, charity Library for All [[3]](#3) as a volunteer 💖
-* 1 non profit startup slash Open Source project called vol.community [[4]](#4) ~~see the prototype at and start contributing at the Github project page [[5]](#5) if you are able to donate a little time.~~
-* Attended 1 conference and joined 44 local Meetup groups.
+* 1 non profit startup slash Open Source project called vol.community [[4]](#4) ~~see the prototype at and start contributing at the Github project page [[5]](#5) if you are able to donate a little time.~~ 👨‍💻
+* Attended 1 conference and joined 44 local Meetup groups 👋
 
 # What is going well
 ## Communicated and agreement on time spent
@@ -55,18 +55,16 @@ by having a firstborn. At the same time, it is amazing to be able to has this mu
 ## Isolation
 At times it's hard not being able to bounce ideas at other people with a simlar skillset. White boards help, so does having regular catch up meetings with peers over video calls. Going to local meetups and conferences helps to connect with locals of all walks of life, and can be inspiring.
 ## Blogging
-This is my second blog post while I planned a much higher frequency of updates. Shame on me!
+This is my second blog post while I planned a much higher frequency of updates. Shame on me! 🤷‍♂️
 
 # The future
-
-I'm excited to push Vol.community to beta this week, and start launching a few startup ideas. There is a short list of things I'd like to build that would work on the same technology stack, and it would be a shame
-to not put the knowledge and code gained to use.
+I'm excited to push Vol.community to beta this week, and start launching a few startup ideas. There is a short list of things I'd like to build that would work on the same technology stack, and it would be a shame to not put the knowledge and code gained to use.
 
 In regards to deepening and expanding knowledge, I'm about to study and experiment with statistics and machine learning with my good friend Damien [[6]](#6).
 
 Getting more involved with IOT, there are some exciting projects that I've started to collaborate on.
 
-And last but not least, my first full grain brew, most likely a Belgian style strong ale. Cheers!
+And last but not least, my first full grain brew, most likely a Belgian style strong ale 🍺
 
 # References
 
