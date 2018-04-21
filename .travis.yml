@@ -4,18 +4,15 @@ go: 1.8
 
 install:
   - go get -v gopkg.in/spf13/hugo.v0 # Install the latest v0 release -currently 0.20.7
-  # Clean and don't fail
-  - rm -rf public || exit 0
 
 script:
     - cd sabbatical-hugo                # Our sources live here
     - $GOPATH/bin/hugo.v0               # Hugo will default to writing output to public
-    - ls public
 
 deploy:
   provider: pages             # Use the Github Pages provider
   skip_cleanup: true          # Don't remove the output files of our builds, the provider needs them to deploy
-  local_dir: public           # Hugo output will be found here
+  local_dir: sabbatical-hugo/public # Hugo output will be found here
   github_token: $GITHUB_TOKEN # As set in travis-ci.org dashboard
   target_branch: master       # Sites following the user.github.io pattern can only be served from master :|
   fqdn: www.0tt0.net          # Generates CNAME for Github Pages to use
