@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ojongerius/ojongerius.github.io.svg?branch=deploy)](https://travis-ci.org/ojongerius/ojongerius.github.io)
+
 Repository used to generate www.0tt0.net
 
 # Deploying

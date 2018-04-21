@@ -2,7 +2,10 @@ language: go
 
 go: 1.8
 
-install: go get -v gopkg.in/spf13/hugo.v0 # Install the latest v0 release -currently 0.20.7
+install:
+  - go get -v gopkg.in/spf13/hugo.v0 # Install the latest v0 release -currently 0.20.7
+  # Clean and don't fail
+  - rm -rf public || exit 0
 
 script:
     - cd sabbatical-hugo                # Our sources live here
