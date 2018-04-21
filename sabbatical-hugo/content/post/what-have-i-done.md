@@ -2,7 +2,7 @@
 description = ""
 categories = ["sabbatical", "expat"]
 tags = ["sabbatical", "chickens", "vegetables", "farming", "diy", "study", "brewing", "volunteering"]
-draft = true
+draft = false
 +++
 
 *This blog post never made it out, and am publishing it only 188 days late* 😂
@@ -10,6 +10,7 @@ draft = true
 According to my calendar I'm in day 146 of my Sabbatical. Time to count my blessings.
 
 Let's start with some numbers:
+
 * Married one, the love of my life ❤️ 
 * Had one son, S 🥂
 * Raised four chickens and a few days ago we marked our 250th egg 🍳
