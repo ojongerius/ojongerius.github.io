@@ -8,7 +8,7 @@ title = "A Windy Sabbatical"
 #    layoutReverse = true # For Hyde theme
 
 theme = "hucore"
-copyright = "&copy; 2017 | Follow on <a href=\"https://twitter.com/xzu\" target=\"_blank\">Twitter</a> | <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
+copyright = "&copy; 2018 | Follow on <a href=\"https://twitter.com/xzu\" target=\"_blank\">Twitter</a> | <a href=\"http://gohugo.io\" target=\"_blank\">Hugo</a> ♥"
 googleAnalytics = "UA-29758853-2"
 
 [taxonomies]
