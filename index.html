@@ -2,11 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="refresh" content="0; url=https://www.jongerius.solutions">
-    <title>Redirecting&hellip;</title>
+    <link rel="canonical" href="https://www.jongerius.solutions">
+    <meta name="description" content="This site has moved to jongerius.solutions.">
+    <title>Redirecting to jongerius.solutions&hellip;</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #222;
+            background: #fafafa;
+        }
+        a { color: #0066cc; }
+        /* Hidden until the redirect proves slow, so a fast jump shows no flash. */
+        #msg {
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+        }
+        #msg.show { opacity: 1; }
+    </style>
 </head>
 <body>
-    <p>Redirecting to <a href="https://www.jongerius.solutions">jongerius.solutions</a>&hellip;</p>
-    <script>window.location.replace("https://www.jongerius.solutions");</script>
+    <p id="msg">Redirecting to <a href="https://www.jongerius.solutions">jongerius.solutions</a>&hellip;</p>
+    <script>
+        // Reveal the fallback message only if we're still here after a moment.
+        setTimeout(function () {
+            document.getElementById("msg").classList.add("show");
+        }, 1000);
+        window.location.replace("https://www.jongerius.solutions");
+    </script>
 </body>
 </html>
